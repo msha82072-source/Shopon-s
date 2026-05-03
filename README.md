@@ -263,7 +263,7 @@ MIT License — free to use and learn from.
 ## 👨‍💻 Developer
 
 **Shahbaz**
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: [@msha82072-source](https://github.com/msha82072-source/Shopon-s)
 - Learning Flutter | Building in public
 
 ---
