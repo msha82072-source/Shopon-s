@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOPON - Vendor Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary-fixed-variant": "#584400",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#eeeeee",
+                      "on-secondary-fixed-variant": "#4b4737",
+                      "tertiary-container": "#c8a74c",
+                      "primary-fixed-dim": "#b7c6ee",
+                      "on-surface-variant": "#45464e",
+                      "tertiary": "#755b00",
+                      "tertiary-fixed-dim": "#e6c364",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#1f1c0e",
+                      "outline": "#75777f",
+                      "surface": "#f9f9f9",
+                      "surface-dim": "#dadada",
+                      "surface-container-low": "#f3f3f4",
+                      "primary-container": "#1b2a4a",
+                      "primary": "#041534",
+                      "secondary": "#635e4d",
+                      "background": "#f9f9f9",
+                      "on-primary-fixed-variant": "#384668",
+                      "secondary-fixed-dim": "#cdc6b1",
+                      "on-primary-fixed": "#0a1a3a",
+                      "on-background": "#1a1c1c",
+                      "on-primary-container": "#8392b7",
+                      "tertiary-fixed": "#ffe08f",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "inverse-primary": "#b7c6ee",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-surface": "#2f3131",
+                      "outline-variant": "#c5c6cf",
+                      "on-surface": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#d9e2ff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "secondary-container": "#eae2cc",
+                      "surface-tint": "#4f5e81",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-tertiary-container": "#4f3d00",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#696453",
+                      "surface-container-highest": "#e2e2e2",
+                      "secondary-fixed": "#eae2cc",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "gutter": "16px",
+                      "container-margin": "20px",
+                      "md": "16px",
+                      "unit": "4px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "xl": "48px"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-secondary-container min-h-screen text-on-background font-body-md text-body-md flex antialiased">
+<!-- Sidebar -->
+<aside class="w-64 bg-primary-container h-screen fixed left-0 top-0 hidden md:flex flex-col z-50 shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+<div class="px-6 py-8 border-b border-white/10">
+<h1 class="font-headline-lg text-headline-lg text-secondary-container tracking-[0.2em] uppercase">SHOPON</h1>
+</div>
+<nav class="flex-1 py-8 px-4 flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-secondary-container/10 text-secondary-container font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary-container/60 hover:bg-secondary-container/5 hover:text-secondary-container font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                Products
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary-container/60 hover:bg-secondary-container/5 hover:text-secondary-container font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                Orders
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary-container/60 hover:bg-secondary-container/5 hover:text-secondary-container font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary-container/60 hover:bg-secondary-container/5 hover:text-secondary-container font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-6 border-t border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest overflow-hidden">
+<img alt="Vendor Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a middle-aged man in a tailored suit, studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJqvi9IJOdybeWkt25ECsfCQ1I2HKbUa7ZtDb9qJ6L6yCqEtO3ijPkeGcXIDJ_qo-ZJjX2SOQcbSeqPVs7GgD9V5j3uOpBzMl3CQ0QjKna-xS6VBStRAo_kAIXRoqKtn1vqZY3fRrIRAlxSMY693Hi4KtxU-C06XlCe8pVZ_mE_Cq2f1zb3GELB4uSaCbyC3InHrQ0mcPD4bMjDSpXzY6j1MfmFMA_uRmMAcSnHAN-oc7M8zutr36n73TW7UhfCoGKT2mDf15PR3Qi"/>
+</div>
+<div class="flex flex-col">
+<span class="font-button text-button text-secondary-container">Maison Luxe</span>
+<span class="font-label-md text-label-md text-secondary-container/60">Vendor Account</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-6 md:p-12 max-w-7xl mx-auto w-full">
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-center justify-between mb-xl gap-6">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary-container mb-2">Overview</h2>
+<p class="font-body-lg text-body-lg text-primary-container/70">Welcome back, Maison Luxe. Here's what's happening today.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="h-12 px-6 rounded-lg border border-primary-container/20 text-primary-container font-button text-button hover:bg-primary-container/5 transition-colors flex items-center gap-2 bg-surface-container-lowest">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                    Last 30 Days
+                </button>
+<button class="h-12 w-12 rounded-lg bg-surface-container-lowest border border-primary-container/20 text-primary-container flex items-center justify-center hover:bg-primary-container/5 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span>
+</button>
+</div>
+</header>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-xl">
+<!-- Stat Card 1 -->
+<div class="bg-tertiary-container rounded-xl p-8 relative overflow-hidden group shadow-[0px_10px_30px_rgba(27,42,74,0.05)] border border-primary-container/10">
+<div class="absolute top-0 right-0 p-6 opacity-20 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[64px] text-primary-container" data-icon="payments">payments</span>
+</div>
+<div class="relative z-10">
+<p class="font-label-md text-label-md text-primary-container/80 uppercase mb-2">Total Revenue</p>
+<h3 class="font-headline-lg text-headline-lg text-primary-container mb-4">$124,500.00</h3>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-primary-container">
+<span class="material-symbols-outlined text-[16px] bg-primary-container/10 rounded-full p-0.5" data-icon="trending_up">trending_up</span>
+<span class="font-medium">+12.5%</span>
+<span class="opacity-70">vs last month</span>
+</div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_10px_30px_rgba(27,42,74,0.05)] border border-primary-container/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-label-md text-label-md text-primary-container/60 uppercase mb-2">Active Orders</p>
+<h3 class="font-headline-lg text-headline-lg text-primary-container">842</h3>
+</div>
+<span class="material-symbols-outlined text-primary-container/40 text-3xl" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-primary-container/70">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="trending_up">trending_up</span>
+<span class="font-medium text-tertiary-container">+5.2%</span>
+<span>vs last month</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_10px_30px_rgba(27,42,74,0.05)] border border-primary-container/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-label-md text-label-md text-primary-container/60 uppercase mb-2">Average Rating</p>
+<h3 class="font-headline-lg text-headline-lg text-primary-container">4.9</h3>
+</div>
+<span class="material-symbols-outlined text-primary-container/40 text-3xl" data-icon="star_rate">star_rate</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-primary-container/70">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_flat">trending_flat</span>
+<span class="font-medium">0.0%</span>
+<span>vs last month</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Chart Section (Spans 2 columns) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-8 shadow-[0px_10px_30px_rgba(27,42,74,0.05)] border border-primary-container/20">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-md text-headline-md text-primary-container">Revenue Overview</h3>
+<button class="font-button text-button text-primary-container/60 hover:text-primary-container transition-colors flex items-center gap-1">
+                        Export <span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+</button>
+</div>
+<!-- Simplified CSS Chart Representation -->
+<div class="h-64 flex items-end justify-between gap-2 border-b border-l border-primary-container/10 pb-4 pl-4 relative">
+<!-- Y Axis Labels -->
+<div class="absolute left-[-30px] top-0 bottom-4 flex flex-col justify-between font-label-md text-label-md text-primary-container/40 h-full">
+<span>$5k</span>
+<span>$2.5k</span>
+<span>$0</span>
+</div>
+<!-- Bars -->
+<div class="w-full bg-tertiary-container/20 hover:bg-tertiary-container transition-colors rounded-t-sm h-[40%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$2,100</span>
+</div>
+<div class="w-full bg-tertiary-container/20 hover:bg-tertiary-container transition-colors rounded-t-sm h-[65%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$3,400</span>
+</div>
+<div class="w-full bg-tertiary-container/20 hover:bg-tertiary-container transition-colors rounded-t-sm h-[45%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$2,400</span>
+</div>
+<div class="w-full bg-tertiary-container/20 hover:bg-tertiary-container transition-colors rounded-t-sm h-[80%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$4,200</span>
+</div>
+<div class="w-full bg-tertiary-container/60 hover:bg-tertiary-container transition-colors rounded-t-sm h-[95%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$4,900</span>
+</div>
+<div class="w-full bg-tertiary-container/20 hover:bg-tertiary-container transition-colors rounded-t-sm h-[60%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$3,100</span>
+</div>
+<div class="w-full bg-tertiary-container rounded-t-sm h-[100%] group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 font-label-md text-label-md text-primary-container opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest px-2 py-1 rounded shadow-sm border border-primary-container/10">$5,200</span>
+</div>
+</div>
+<!-- X Axis Labels -->
+<div class="flex justify-between mt-4 font-label-md text-label-md text-primary-container/40 pl-4">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+<!-- Recent Orders List -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_10px_30px_rgba(27,42,74,0.05)] border border-primary-container/20 flex flex-col h-full">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary-container">Recent Orders</h3>
+<a class="font-button text-button text-tertiary-container hover:text-tertiary-container/80 transition-colors" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-4 flex-1">
+<!-- Order Item -->
+<div class="flex items-center gap-4 py-3 border-b border-primary-container/5 last:border-0">
+<div class="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-primary-container/60">
+<span class="material-symbols-outlined" data-icon="checkroom">checkroom</span>
+</div>
+<div class="flex-1">
+<p class="font-button text-button text-primary-container">Silk Evening Gown</p>
+<p class="font-body-sm text-body-sm text-primary-container/60">#ORD-0921 • Just now</p>
+</div>
+<div class="text-right">
+<p class="font-button text-button text-primary-container">$895.00</p>
+<span class="inline-block px-2 py-1 rounded-full bg-tertiary-container/10 text-tertiary-container font-label-md text-[10px] uppercase">Processing</span>
+</div>
+</div>
+<!-- Order Item -->
+<div class="flex items-center gap-4 py-3 border-b border-primary-container/5 last:border-0">
+<div class="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-primary-container/60">
+<span class="material-symbols-outlined" data-icon="diamond">diamond</span>
+</div>
+<div class="flex-1">
+<p class="font-button text-button text-primary-container">Pearl Drop Earrings</p>
+<p class="font-body-sm text-body-sm text-primary-container/60">#ORD-0920 • 2h ago</p>
+</div>
+<div class="text-right">
+<p class="font-button text-button text-primary-container">$340.00</p>
+<span class="inline-block px-2 py-1 rounded-full bg-primary-container/5 text-primary-container/60 font-label-md text-[10px] uppercase">Shipped</span>
+</div>
+</div>
+<!-- Order Item -->
+<div class="flex items-center gap-4 py-3 border-b border-primary-container/5 last:border-0">
+<div class="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-primary-container/60">
+<span class="material-symbols-outlined" data-icon="watch">watch</span>
+</div>
+<div class="flex-1">
+<p class="font-button text-button text-primary-container">Classic Leather Watch</p>
+<p class="font-body-sm text-body-sm text-primary-container/60">#ORD-0919 • 5h ago</p>
+</div>
+<div class="text-right">
+<p class="font-button text-button text-primary-container">$1,250.00</p>
+<span class="inline-block px-2 py-1 rounded-full bg-primary-container/5 text-primary-container/60 font-label-md text-[10px] uppercase">Delivered</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

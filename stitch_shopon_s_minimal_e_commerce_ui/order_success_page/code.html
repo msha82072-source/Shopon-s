@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOPON - Order Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#4b4737",
+                        "tertiary-container": "#c8a74c",
+                        "primary-fixed-dim": "#b7c6ee",
+                        "on-surface-variant": "#45464e",
+                        "tertiary": "#755b00",
+                        "tertiary-fixed-dim": "#e6c364",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1f1c0e",
+                        "outline": "#75777f",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-container": "#1b2a4a",
+                        "primary": "#041534",
+                        "secondary": "#635e4d",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed-variant": "#384668",
+                        "secondary-fixed-dim": "#cdc6b1",
+                        "on-primary-fixed": "#0a1a3a",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#8392b7",
+                        "tertiary-fixed": "#ffe08f",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#b7c6ee",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#eae2cc",
+                        "surface-tint": "#4f5e81",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-container": "#4f3d00",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#696453",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#eae2cc",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-primary-container text-surface-bright min-h-screen flex flex-col items-center justify-center font-body-md antialiased selection:bg-tertiary-container selection:text-primary-container">
+<main class="w-full max-w-md px-container-margin flex flex-col items-center justify-center text-center">
+<!-- Animated Checkmark / Icon Container -->
+<div class="mb-xl relative">
+<div class="absolute inset-0 bg-tertiary-container opacity-20 rounded-full blur-xl scale-150"></div>
+<div class="w-24 h-24 rounded-full border-2 border-tertiary-container flex items-center justify-center relative z-10 bg-primary-container">
+<span class="material-symbols-outlined text-[48px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Success Message -->
+<div class="space-y-sm mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-surface-bright tracking-wide">Order Placed!</h1>
+<p class="font-body-lg text-body-lg text-inverse-primary/80">
+                Your luxury curated items are being prepared.
+            </p>
+</div>
+<!-- Order Details Snippet (Minimal) -->
+<div class="w-full border-t border-b border-inverse-primary/20 py-lg mb-xl space-y-md">
+<div class="flex justify-between items-center text-left">
+<span class="font-body-md text-body-md text-inverse-primary/60">Order Number</span>
+<span class="font-button text-button text-surface-bright uppercase tracking-wider">#SHP-8924</span>
+</div>
+<div class="flex justify-between items-center text-left">
+<span class="font-body-md text-body-md text-inverse-primary/60">Confirmation sent to</span>
+<span class="font-body-md text-body-md text-surface-bright">user@example.com</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-12 bg-surface-bright text-primary-container font-button text-button rounded-lg flex items-center justify-center hover:bg-surface-dim transition-colors duration-200">
+            Back to Home
+        </button>
+<p class="mt-lg font-body-sm text-body-sm text-inverse-primary/40">
+            Need help? <a class="text-tertiary-container hover:underline underline-offset-4" href="#">Contact Support</a>
+</p>
+</main>
+</body></html>

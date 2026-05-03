@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cart - SHOPON</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eeeeee",
+                    "on-secondary-fixed-variant": "#4b4737",
+                    "tertiary-container": "#c8a74c",
+                    "primary-fixed-dim": "#b7c6ee",
+                    "on-surface-variant": "#45464e",
+                    "tertiary": "#755b00",
+                    "tertiary-fixed-dim": "#e6c364",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#1f1c0e",
+                    "outline": "#75777f",
+                    "surface": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "surface-container-low": "#f3f3f4",
+                    "primary-container": "#1b2a4a",
+                    "primary": "#041534",
+                    "secondary": "#635e4d",
+                    "background": "#f9f9f9",
+                    "on-primary-fixed-variant": "#384668",
+                    "secondary-fixed-dim": "#cdc6b1",
+                    "on-primary-fixed": "#0a1a3a",
+                    "on-background": "#1a1c1c",
+                    "on-primary-container": "#8392b7",
+                    "tertiary-fixed": "#ffe08f",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#b7c6ee",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-surface": "#2f3131",
+                    "outline-variant": "#c5c6cf",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d9e2ff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "secondary-container": "#eae2cc",
+                    "surface-tint": "#4f5e81",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-tertiary-container": "#4f3d00",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#696453",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed": "#eae2cc",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "gutter": "16px",
+                    "container-margin": "20px",
+                    "md": "16px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "xl": "48px"
+            },
+            "fontFamily": {
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "button": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #F5EDD7; /* Custom Cream requested by user */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen pb-[90px] pt-[72px] md:pt-0">
+<!-- TopAppBar -->
+<header class="bg-[#FDFBF7] dark:bg-slate-950 text-[#1B2A4A] dark:text-slate-100 font-['Noto_Serif'] font-light tracking-widest uppercase docked full-width top-0 z-40 border-b border-[#1B2A4A]/20 flat no shadows flex justify-between items-center w-full px-6 py-4 max-w-full fixed md:relative">
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<div class="text-2xl font-bold tracking-[0.2em] text-[#1B2A4A] dark:text-white">SHOPON</div>
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-container-margin py-xl md:py-xl">
+<div class="flex flex-col md:flex-row gap-xl">
+<!-- Cart Items Section -->
+<div class="flex-1">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-lg">Your Cart</h1>
+<div class="flex flex-col gap-md">
+<!-- Cart Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-primary/20 p-md flex gap-md items-center">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Product Image" class="w-full h-full object-cover" data-alt="minimalist ceramic vase in soft natural lighting on a clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB29YrxVyaa21i6hUTjCRV1kO1_pniusN-VnmV9YbVAa6N8la1frqgsyaNnQJqB1XjWP9kg565Psnxo1uEe-eeVq5lJWAdn0oteS-qqwjRHbZ-P-Y_1hY4jxZz-74CKvZJxw6MZDmsRQQSd2LbuJBLU0MvmHjupde5Jftm-LR2oTbfcFYCekiLzNcuMMrsrDK60mKh39XwOo9nIU6-egaKQwL7pd2XSOk2o9FkA8CQiVM58ZhdTFqMCTs6Lj-qxJ0jkBrp3UxC4kJ1S"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary">Artisan Ceramic Vase</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Matte White</p>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<div class="flex items-center gap-sm border border-primary/20 rounded-DEFAULT px-sm py-xs">
+<button class="text-primary/60 hover:text-primary"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="font-body-sm text-body-sm text-primary w-6 text-center">1</span>
+<button class="text-primary/60 hover:text-primary"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$120.00</span>
+</div>
+</div>
+<button class="self-start text-primary/40 hover:text-error transition-colors p-unit">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Cart Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-primary/20 p-md flex gap-md items-center">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Product Image" class="w-full h-full object-cover" data-alt="folded linen napkins in earthy tones on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSHocWE6MwyqzR1rdD_MlYBEcTNlJvh9I8t3Hi5ijdFeOp0nDTFCx6rg3cQ96rLAlFQpn3T9LDs7KUHeUZbRUW0jW16YFJKJn-vrxbaJb7Zy6phxap2tGkmWRdba-5q_dmd2lTwH53DhUhR53ZvtKpifwbuht5SCsQmgLcrOY70XElkeLLfyVUpgjW5Az0g4F5pZnZzvCYQVkynSdnfHSgLr8w3hbvOZEXmb2oyTK6q_bfXEKovIU1UTg09O-U2_7ru-ZRhIZMkvVb"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary">Linen Napkin Set</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Oatmeal / Set of 4</p>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<div class="flex items-center gap-sm border border-primary/20 rounded-DEFAULT px-sm py-xs">
+<button class="text-primary/60 hover:text-primary"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="font-body-sm text-body-sm text-primary w-6 text-center">2</span>
+<button class="text-primary/60 hover:text-primary"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$48.00</span>
+</div>
+</div>
+<button class="self-start text-primary/40 hover:text-error transition-colors p-unit">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Order Summary Section -->
+<div class="w-full md:w-[320px] shrink-0 mt-xl md:mt-0">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Summary</h2>
+<div class="bg-surface-container-lowest rounded-xl border border-primary/20 p-lg">
+<div class="flex justify-between items-center mb-md">
+<span class="font-body-md text-body-md text-on-surface-variant">Subtotal</span>
+<span class="font-body-md text-body-md text-primary">$168.00</span>
+</div>
+<div class="flex justify-between items-center mb-md">
+<span class="font-body-md text-body-md text-on-surface-variant">Shipping</span>
+<span class="font-body-md text-body-md text-primary">Calculated at next step</span>
+</div>
+<div class="border-t border-primary/20 pt-md mt-md flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary">Total</span>
+<span class="font-headline-md text-headline-md text-tertiary-container">$168.00</span>
+</div>
+<button class="w-full bg-primary text-on-primary font-button text-button h-12 rounded-lg mt-lg hover:opacity-90 transition-opacity flex items-center justify-center">
+                        Checkout
+                    </button>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant mt-sm">Taxes and shipping calculated at checkout</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-[#1B2A4A] dark:text-slate-100 font-['Inter'] text-[10px] font-medium uppercase tracking-tighter fixed bottom-0 w-full z-50 border-t border-[#1B2A4A]/10 dark:border-slate-800 shadow-[0px_-10px_30px_rgba(27,42,74,0.05)] fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe bg-white">
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 hover:text-[#1B2A4A] dark:hover:text-white transition-colors w-16 h-14" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="home_stone">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 hover:text-[#1B2A4A] dark:hover:text-white transition-colors w-16 h-14" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="search">search</span>
+<span>Search</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center justify-center text-[#C9A84C] border-t-2 border-[#C9A84C] pt-2 hover:text-[#1B2A4A] dark:hover:text-white transition-colors w-16 h-14" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="shopping_cart">shopping_cart</span>
+<span>Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 hover:text-[#1B2A4A] dark:hover:text-white transition-colors w-16 h-14" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

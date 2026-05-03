@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOPON - Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#4b4737",
+                        "tertiary-container": "#c8a74c",
+                        "primary-fixed-dim": "#b7c6ee",
+                        "on-surface-variant": "#45464e",
+                        "tertiary": "#755b00",
+                        "tertiary-fixed-dim": "#e6c364",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1f1c0e",
+                        "outline": "#75777f",
+                        "surface": "#F5EDD7",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-container": "#1b2a4a",
+                        "primary": "#041534",
+                        "secondary": "#635e4d",
+                        "background": "#F5EDD7",
+                        "on-primary-fixed-variant": "#384668",
+                        "secondary-fixed-dim": "#cdc6b1",
+                        "on-primary-fixed": "#0a1a3a",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#8392b7",
+                        "tertiary-fixed": "#ffe08f",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#b7c6ee",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#eae2cc",
+                        "surface-tint": "#4f5e81",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-container": "#4f3d00",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#696453",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#eae2cc",
+                        "on-secondary": "#ffffff",
+                        "navy": "#1B2A4A",
+                        "cream": "#F5EDD7",
+                        "gold": "#C9A84C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-navy text-white flex flex-col hidden md:flex border-r border-navy/20 flex-shrink-0">
+<div class="p-6 border-b border-white/10">
+<h1 class="font-display-lg text-white text-2xl tracking-[0.2em] uppercase">SHOPON</h1>
+<p class="font-label-md text-white/60 mt-1 uppercase">Admin Panel</p>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto">
+<ul class="space-y-2 px-4">
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-button">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-white/10 text-gold border-l-2 border-gold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-button">User Management</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-button">Products</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-button">Orders</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-button">Analytics</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-button">Settings</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-white/10">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/60 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-button">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden">
+<!-- Top App Bar (Mobile) -->
+<header class="md:hidden bg-surface-container-lowest border-b border-navy/20 flex justify-between items-center w-full px-6 py-4 max-w-full docked full-width top-0 z-40">
+<button class="text-navy hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg text-2xl font-bold tracking-[0.2em] text-navy uppercase">SHOPON</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-6 md:p-10 lg:px-16">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-navy">User Management</h2>
+<p class="font-body-md text-navy/60 mt-2">Manage customer accounts, roles, and permissions.</p>
+</div>
+<button class="bg-gold text-navy font-button px-6 py-3 rounded-lg flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity h-12">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>Add New User</span>
+</button>
+</div>
+<!-- Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-navy/20 shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+<div class="flex items-center justify-between">
+<h3 class="font-label-md text-navy/60 uppercase">Total Users</h3>
+<span class="material-symbols-outlined text-gold">group</span>
+</div>
+<p class="font-display-lg text-navy mt-4">12,450</p>
+<p class="font-body-sm text-green-600 mt-2 flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-1">trending_up</span>
+                            +12% from last month
+                        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-navy/20 shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+<div class="flex items-center justify-between">
+<h3 class="font-label-md text-navy/60 uppercase">Active Now</h3>
+<span class="material-symbols-outlined text-gold">bolt</span>
+</div>
+<p class="font-display-lg text-navy mt-4">342</p>
+<p class="font-body-sm text-navy/60 mt-2">Users online in the last hour</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-navy/20 shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+<div class="flex items-center justify-between">
+<h3 class="font-label-md text-navy/60 uppercase">New Registrations</h3>
+<span class="material-symbols-outlined text-gold">person_add</span>
+</div>
+<p class="font-display-lg text-navy mt-4">89</p>
+<p class="font-body-sm text-navy/60 mt-2">In the last 24 hours</p>
+</div>
+</div>
+<!-- Controls -->
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-navy/20">
+<div class="relative w-full sm:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-navy/40">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-transparent border border-navy/20 rounded-lg font-body-sm text-navy focus:outline-none focus:border-navy/40 focus:ring-0" placeholder="Search users by name, email, or ID..." type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="flex items-center justify-center space-x-2 px-4 py-2 border border-navy/20 rounded-lg text-navy font-button hover:bg-navy/5 transition-colors flex-1 sm:flex-none">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center justify-center space-x-2 px-4 py-2 border border-navy/20 rounded-lg text-navy font-button hover:bg-navy/5 transition-colors flex-1 sm:flex-none">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="bg-surface-container-lowest rounded-xl border border-navy/20 overflow-hidden shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bright border-b border-navy/20">
+<th class="py-4 px-6 font-label-md text-navy/60 uppercase">User</th>
+<th class="py-4 px-6 font-label-md text-navy/60 uppercase">Status</th>
+<th class="py-4 px-6 font-label-md text-navy/60 uppercase">Role</th>
+<th class="py-4 px-6 font-label-md text-navy/60 uppercase">Last Login</th>
+<th class="py-4 px-6 font-label-md text-navy/60 uppercase text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-navy divide-y divide-navy/10">
+<tr class="hover:bg-navy/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center text-navy font-headline-md">
+                                                EJ
+                                            </div>
+<div>
+<p class="font-button">Eleanor James</p>
+<p class="text-navy/60 text-xs">eleanor.j@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                            Active
+                                        </span>
+</td>
+<td class="py-4 px-6">Customer</td>
+<td class="py-4 px-6 text-navy/60">2 hours ago</td>
+<td class="py-4 px-6 text-right">
+<button class="text-navy/60 hover:text-gold transition-colors p-1">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-navy/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center text-navy font-headline-md">
+                                                MW
+                                            </div>
+<div>
+<p class="font-button">Marcus Weaver</p>
+<p class="text-navy/60 text-xs">m.weaver@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                            Active
+                                        </span>
+</td>
+<td class="py-4 px-6">Admin</td>
+<td class="py-4 px-6 text-navy/60">5 mins ago</td>
+<td class="py-4 px-6 text-right">
+<button class="text-navy/60 hover:text-gold transition-colors p-1">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-navy/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center text-navy font-headline-md">
+                                                SC
+                                            </div>
+<div>
+<p class="font-button">Sophia Chen</p>
+<p class="text-navy/60 text-xs">sophia.c@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">
+                                            Suspended
+                                        </span>
+</td>
+<td class="py-4 px-6">Customer</td>
+<td class="py-4 px-6 text-navy/60">Oct 12, 2023</td>
+<td class="py-4 px-6 text-right">
+<button class="text-navy/60 hover:text-gold transition-colors p-1">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-navy/5 transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center text-navy font-headline-md">
+                                                DL
+                                            </div>
+<div>
+<p class="font-button">David Lin</p>
+<p class="text-navy/60 text-xs">david.lin@example.com</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">
+                                            Pending
+                                        </span>
+</td>
+<td class="py-4 px-6">Editor</td>
+<td class="py-4 px-6 text-navy/60">Never</td>
+<td class="py-4 px-6 text-right">
+<button class="text-navy/60 hover:text-gold transition-colors p-1">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="bg-surface-bright px-6 py-4 border-t border-navy/20 flex items-center justify-between">
+<p class="font-body-sm text-navy/60">Showing <span class="font-button text-navy">1</span> to <span class="font-button text-navy">10</span> of <span class="font-button text-navy">12,450</span> results</p>
+<div class="flex items-center space-x-2">
+<button class="p-2 rounded-md border border-navy/20 text-navy hover:bg-navy/5 transition-colors disabled:opacity-50">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="p-2 rounded-md border border-navy/20 text-navy hover:bg-navy/5 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Nav (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe bg-surface-container-lowest/90 backdrop-blur-md border-t border-navy/10 z-50 shadow-[0px_-10px_30px_rgba(27,42,74,0.05)] pb-4 pt-2">
+<a class="flex flex-col items-center justify-center text-navy/40 hover:text-navy transition-colors w-16" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-sm text-[10px] font-medium uppercase tracking-tighter mt-1">Dash</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gold border-t-2 border-gold -mt-2 pt-2 w-16" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-body-sm text-[10px] font-medium uppercase tracking-tighter mt-1">Users</span>
+</a>
+<a class="flex flex-col items-center justify-center text-navy/40 hover:text-navy transition-colors w-16" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-body-sm text-[10px] font-medium uppercase tracking-tighter mt-1">Products</span>
+</a>
+<a class="flex flex-col items-center justify-center text-navy/40 hover:text-navy transition-colors w-16" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-sm text-[10px] font-medium uppercase tracking-tighter mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

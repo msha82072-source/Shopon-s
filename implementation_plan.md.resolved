@@ -1,0 +1,66 @@
+# Implementation Plan - ANTIGRAVITY Multi-Vendor Marketplace
+
+ANTIGRAVITY is a multi-vendor fashion e-commerce platform built with Flutter and Supabase. This plan outlines the steps to build the application from scratch based on the provided PRD.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Project Naming**: The workspace directory is `shopons`, but the product name is `ANTIGRAVITY`. I will initialize the Flutter project in the current directory (`shopons`) but use `antigravity` as the app name and package identifier.
+> **Role Management**: I'll use a custom metadata or a dedicated `users` table to manage roles. The schema I've prepared uses a `users` table synced with Supabase Auth.
+> **Platforms**: I'll target Android and Web. Initial development and testing will be done on Web/Windows for speed, ensuring responsive layouts for mobile.
+
+## Proposed Changes
+
+### 1. Backend Setup (Supabase)
+Initialize the database with the required tables, enums, and RLS policies.
+
+#### [NEW] [schema.sql](file:///d:/Development/projects/shopons/schema.sql)
+- Defines tables for `users`, `vendor_profiles`, `categories`, `products`, `orders`, etc.
+- Sets up Row Level Security (RLS) to ensure vendors only access their data and customers only access theirs.
+
+### 2. Flutter Project Initialization
+Set up the core project structure, dependencies, and architecture.
+
+#### [NEW] Project Structure
+- **State Management**: GetX for controllers and routing.
+- **Architecture**:
+  - `lib/core/`: Constants, theme, Supabase client, utils.
+  - `lib/data/`: Models, providers, repositories.
+  - `lib/modules/`: Feature-based modules (auth, home, product, cart, vendor, admin).
+  - `lib/routes/`: App routing configuration.
+
+#### Dependencies
+- `get`, `supabase_flutter`, `google_fonts`, `cached_network_image`, `flutter_svg`, `intl`.
+
+### 3. Design System & Theme
+Implement the fashion-forward aesthetic.
+
+- **Colors**: Deep Black/Charcoal, Gold/Amber.
+- **Fonts**: Modern sans-serif (Inter/Outfit).
+- **Components**: Premium buttons, inputs, product cards, and glassmorphism effects.
+
+### 4. Core Feature Implementation
+- **Phase 4.1: Authentication**: Signup/Login for Customers and Vendors. Role-based redirection.
+- **Phase 4.2: Marketplace**: Category browsing, product grid, and details page.
+- **Phase 4.3: Vendor Flow**: Store setup, product CRUD, order management.
+- **Phase 4.4: Shopping Flow**: Cart, multi-vendor order splitting, checkout simulation.
+- **Phase 4.5: Reviews & Ratings**: Post-delivery feedback system.
+- **Phase 4.6: Admin Panel**: User/Vendor management and global analytics.
+
+## Verification Plan
+
+### Automated Tests
+- `flutter test` for core logic and model parsing.
+- Supabase RLS verification using `mcp_supabase` tools.
+
+### Manual Verification
+1. Verify authentication flows for all 3 roles.
+2. Add products as a vendor and ensure they appear in the marketplace.
+3. Place an order with items from multiple vendors and verify split order creation.
+4. Test responsive layout on both Web and Mobile viewports.
+
+## Open Questions
+
+- Should I include sample data (categories, initial products) in the migration script?
+- Do you have specific designs/images for the onboarding slides, or should I generate them?
+- For the "Online Payment" simulation, should it show a specific gateway UI (e.g., card entry) or just a success animation?

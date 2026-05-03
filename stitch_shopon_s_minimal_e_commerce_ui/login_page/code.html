@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOPON - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#4b4737",
+                        "tertiary-container": "#c8a74c",
+                        "primary-fixed-dim": "#b7c6ee",
+                        "on-surface-variant": "#45464e",
+                        "tertiary": "#755b00",
+                        "tertiary-fixed-dim": "#e6c364",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1f1c0e",
+                        "outline": "#75777f",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-container": "#1b2a4a",
+                        "primary": "#041534",
+                        "secondary": "#635e4d",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed-variant": "#384668",
+                        "secondary-fixed-dim": "#cdc6b1",
+                        "on-primary-fixed": "#0a1a3a",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#8392b7",
+                        "tertiary-fixed": "#ffe08f",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#b7c6ee",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#eae2cc",
+                        "surface-tint": "#4f5e81",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-container": "#4f3d00",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#696453",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#eae2cc",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom styles to match the prompt's specific color requests that might fall outside strict theme tokens for this specific execution, though aiming to map where possible */
+        body {
+            background-color: #F5EDD7; /* Cream background requested */
+        }
+        .navy-border {
+            border-color: rgba(27, 42, 74, 0.2);
+        }
+        .text-navy {
+            color: #1B2A4A;
+        }
+        .bg-navy {
+            background-color: #1B2A4A;
+        }
+        .text-gold {
+            color: #C9A84C;
+        }
+        .border-gold {
+            border-color: #C9A84C;
+        }
+        .focus-gold-underline:focus {
+            outline: none;
+            border-bottom: 2px solid #C9A84C;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col antialiased">
+<!-- Top Navigation / Logo Area (Simplified for Login as per instructions) -->
+<header class="w-full flex justify-center items-center py-xl bg-transparent z-40 relative">
+<!-- Logo -->
+<h1 class="font-display-lg text-display-lg text-navy tracking-[0.2em] uppercase">SHOPON</h1>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center px-container-margin py-xl w-full max-w-7xl mx-auto">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-xl shadow-[0px_10px_30px_rgba(27,42,74,0.05)] relative overflow-hidden">
+<!-- Subtle decorative element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<div class="mb-xl text-center">
+<h2 class="font-headline-lg text-headline-lg text-navy mb-sm">Welcome Back</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to access your curated collection.</p>
+</div>
+<form class="space-y-lg">
+<!-- Email Input -->
+<div class="space-y-sm">
+<label class="block font-label-md text-label-md text-navy uppercase" for="email">Email Address</label>
+<input class="w-full h-12 px-md bg-surface-container-lowest border navy-border rounded-DEFAULT font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 focus-gold-underline transition-all duration-200" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+</div>
+<!-- Password Input -->
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<label class="block font-label-md text-label-md text-navy uppercase" for="password">Password</label>
+<a class="font-body-sm text-body-sm text-gold hover:opacity-80 transition-opacity" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-md bg-surface-container-lowest border navy-border rounded-DEFAULT font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 focus-gold-underline transition-all duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-md flex items-center text-on-surface-variant/50 hover:text-navy transition-colors" type="button">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 mt-xl bg-navy text-[#F5EDD7] font-button text-button rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity duration-150" type="submit">
+                        Sign In
+                    </button>
+</form>
+<!-- Divider -->
+<div class="my-lg flex items-center">
+<div class="flex-grow border-t navy-border"></div>
+<span class="px-sm font-body-sm text-body-sm text-on-surface-variant/60 uppercase tracking-widest">Or</span>
+<div class="flex-grow border-t navy-border"></div>
+</div>
+<!-- Secondary Action -->
+<div class="text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="text-navy font-semibold hover:text-gold transition-colors ml-1" href="#">Create one</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Suppressed TopAppBar and BottomNavBar as this is a linear/transactional intent page (Login) -->
+</body></html>

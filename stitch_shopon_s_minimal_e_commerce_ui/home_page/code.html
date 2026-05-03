@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHOPON'S - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#4b4737",
+                        "tertiary-container": "#c8a74c",
+                        "primary-fixed-dim": "#b7c6ee",
+                        "on-surface-variant": "#45464e",
+                        "tertiary": "#755b00",
+                        "tertiary-fixed-dim": "#e6c364",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1f1c0e",
+                        "outline": "#75777f",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-container": "#1b2a4a",
+                        "primary": "#041534",
+                        "secondary": "#635e4d",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed-variant": "#384668",
+                        "secondary-fixed-dim": "#cdc6b1",
+                        "on-primary-fixed": "#0a1a3a",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#8392b7",
+                        "tertiary-fixed": "#ffe08f",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#b7c6ee",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#c5c6cf",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-container": "#eae2cc",
+                        "surface-tint": "#4f5e81",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-container": "#4f3d00",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#696453",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed": "#eae2cc",
+                        "on-secondary": "#ffffff",
+                        "cream": "#F5EDD7",
+                        "navy": "#1B2A4A",
+                        "gold": "#C9A84C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-cream text-navy font-body-md antialiased pb-24 selection:bg-gold selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-[#FDFBF7] text-[#1B2A4A] border-b border-[#1B2A4A]/20 flat no shadows flex justify-between items-center w-full px-6 py-4 max-w-full docked full-width top-0 z-40 sticky">
+<button class="text-[#1B2A4A]/60 hover:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Noto_Serif'] font-light tracking-widest uppercase text-2xl font-bold tracking-[0.2em] text-[#1B2A4A]">SHOPON</h1>
+<button class="text-[#1B2A4A]/60 hover:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-xl">
+<!-- Banners Section -->
+<section class="relative w-full overflow-hidden rounded-xl bg-navy text-white h-[400px] flex items-center justify-center snap-x snap-mandatory">
+<!-- Banner 1: Navy -->
+<div class="w-full h-full flex-shrink-0 snap-center relative">
+<img class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="Editorial fashion photography, elegant woman in silk blouse against muted background, studio lighting, minimal styling, Vogue aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IW9Jo-f7eHb921MD7u95rn5C0-Rll337pRz174X9q9p_RdFT8rxn0jFNQO23XKD4AfKa7RBpBniEOEaKwvVCf60SnzXKp2p8oiteK_4v9N1Ecc4nLmyL-z83xY5A4K_Gck0wEeaKDT7F9P8avCClHfm1gA_w49k7-tkOw7XdCHSWqcrwiaRrWPjQ-j6WQchc_OhDiaDO58sEGkRXbo0EbZh4C5q89DdAEWZ8dCZ-lxE8RACTiwUEesAJ9LNt5Rm7l6hUrCDfpo4-"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-white">NEW ARRIVALS</h2>
+<p class="font-body-md text-body-md max-w-md mx-auto text-white/80 mb-8">Curated pieces for the modern wardrobe.</p>
+<button class="bg-gold text-navy font-button text-button px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all shadow-[0px_10px_30px_rgba(27,42,74,0.05)]">
+                        Shop Collection
+                    </button>
+</div>
+</div>
+<!-- Indicators -->
+<div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-3 z-10">
+<button class="w-2.5 h-2.5 rounded-full bg-gold transition-all"></button>
+<button class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-all"></button>
+<button class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-all"></button>
+</div>
+</section>
+<!-- Category Chips -->
+<section>
+<div class="flex overflow-x-auto hide-scrollbar space-x-3 pb-4">
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    All
+                </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    Dresses
+                </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    Outerwear
+                </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    Accessories
+                </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    Footwear
+                </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border border-navy/20 bg-white font-body-sm text-body-sm text-navy hover:bg-navy/5 transition-colors">
+                    Jewelry
+                </button>
+</div>
+</section>
+<!-- Product Grid -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline-md text-headline-md text-navy">Curated for You</h3>
+<a class="font-label-md text-label-md uppercase text-navy/60 hover:text-navy transition-colors" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product Card 1 -->
+<article class="bg-white rounded-[12px] border border-navy/20 overflow-hidden group hover:shadow-[0px_10px_30px_rgba(27,42,74,0.05)] transition-shadow">
+<div class="aspect-[3/4] relative bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist product shot, structured linen blazer on hanger, neutral cream background, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PTejnfOA1mpS1zRTBXly1jNlhaYQxJIC0CNWE64AjM0q0Egdv1hWmO33-ei5_JmOFRLiOWd5z9MljyNWDrXJrDxTK31P7gILKSxYgKkcKDfPh5oK5Z-3JI1UZT36AhxSS47ag1M-bK0fV8sgjd6cddeXM-4eqIsYNMDUmlHXM7x5Ej-4Dp1C-VThAIxYdREaP2FhcRZeHj_G2EudVGfC0hoWYs7IK1Cw9Pu9dPFZ432eneKiUon1yJVE78kZR1IAX3e4xqrJJ6bD"/>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-navy hover:bg-white transition-colors border border-navy/10">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="font-label-md text-label-md text-navy/60 uppercase mb-1">Outerwear</p>
+<h4 class="font-body-md text-body-md font-medium text-navy mb-2 line-clamp-1">Structured Linen Blazer</h4>
+<p class="font-body-md text-body-md font-semibold text-gold">$245</p>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-white rounded-[12px] border border-navy/20 overflow-hidden group hover:shadow-[0px_10px_30px_rgba(27,42,74,0.05)] transition-shadow">
+<div class="aspect-[3/4] relative bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a premium leather tote bag in tan, minimal styling, crisp studio lighting, white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtIBjt2j3QuJu_2nuEO9KWwH04AdUafF-Nq2yB4sHnOXAOEkKt8bSFjyKm6fzFS1mRF4eGHppnjPD3AvcBScpSLO43rtzN4ORBlMoB161OlHRDkFNLFDpni2-wHlQ1kyhwjdaYoP-ApGkBqiNT_fT2KdFHzFVS74vanIIBjwisjHFa9trX1ihJthwZ2-svLdc97Ke7O_JZ-ediQAcZVrEJQXzoIp4UI7jsbWlyVwVR45xbHP37MovI3DwY2T5fu4orhuTd6qh9lImB"/>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-navy hover:bg-white transition-colors border border-navy/10">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="font-label-md text-label-md text-navy/60 uppercase mb-1">Accessories</p>
+<h4 class="font-body-md text-body-md font-medium text-navy mb-2 line-clamp-1">Everyday Leather Tote</h4>
+<p class="font-body-md text-body-md font-semibold text-gold">$180</p>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-white rounded-[12px] border border-navy/20 overflow-hidden group hover:shadow-[0px_10px_30px_rgba(27,42,74,0.05)] transition-shadow">
+<div class="aspect-[3/4] relative bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Elegant silk slip dress draped over a chair, soft morning light, luxurious interior setting, high-end editorial feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJGxs7_64IThqG9Ojjrb0WcLzd33YDXmjqmXR51qZ5IQMAtKIde3yxTyyCyfQH-enaT5nwo0D5gIk6aT451eDLu7hL46zigGBWxerHco1kH7E9pzTUQm7iAKdz_Anar9wEk683F0IPrrd5xJQOq332AgIQF9bzk27jXRmNrzDLAWF_DOg9JA0AD08KHbHM7nSXY9nACzvqshDiz6P_V4emalmHKm44V6YfNJ3Qzi0XVsVGxucYbyJD56a7e8r0Erl7cr59uyRrPO5R"/>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-navy hover:bg-white transition-colors border border-navy/10">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-2 py-1 bg-gold text-white font-label-md text-[10px] uppercase rounded-sm">
+                            New
+                        </div>
+</div>
+<div class="p-4">
+<p class="font-label-md text-label-md text-navy/60 uppercase mb-1">Dresses</p>
+<h4 class="font-body-md text-body-md font-medium text-navy mb-2 line-clamp-1">Midnight Silk Slip</h4>
+<p class="font-body-md text-body-md font-semibold text-gold">$195</p>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-white rounded-[12px] border border-navy/20 overflow-hidden group hover:shadow-[0px_10px_30px_rgba(27,42,74,0.05)] transition-shadow hidden md:block">
+<div class="aspect-[3/4] relative bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist jewelry styling, delicate gold necklace on a stone pedestal, stark shadows, modern still life" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCi6KZuh5y9zxk0Memn5iv-7pAo5qAhah09L7SS5pKfRn-1LjGJHhwhVQzdCdX1DIcImEqYQESLm9UAbpKLkfvHMfAsk88loM5R-1-ICVMqvRmI-IRigOQ4Cwhs9e-EhDBPuceuc9ThSgfJoyzXRdCT-JWiSZp9UwQ2A40EjCjy89tZus_Jts4QZfl0jOrfRXB0vYvCel8N6rqZ1f9jkuqVgvvJK6oNgM8BBVuorBRGxZIIGvJZG1dzUv-XfPfQOxjl8NXrEVeTqxC"/>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm text-navy hover:bg-white transition-colors border border-navy/10">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="font-label-md text-label-md text-navy/60 uppercase mb-1">Jewelry</p>
+<h4 class="font-body-md text-body-md font-medium text-navy mb-2 line-clamp-1">Dusk Pendant Necklace</h4>
+<p class="font-body-md text-body-md font-semibold text-gold">$120</p>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-[0px_-10px_30px_rgba(27,42,74,0.05)] border-t border-[#1B2A4A]/10 dark:border-slate-800 fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe bg-white z-50 md:hidden">
+<!-- Active Tab: Home -->
+<a class="flex flex-col items-center justify-center text-[#C9A84C] border-t-2 border-[#C9A84C] pt-2 pb-2 w-16 Active: scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home_stone" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-tighter">Home</span>
+</a>
+<!-- Inactive Tab: Search -->
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 pb-2 w-16 hover:text-[#1B2A4A] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-tighter">Search</span>
+</a>
+<!-- Inactive Tab: Cart -->
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 pb-2 w-16 hover:text-[#1B2A4A] dark:hover:text-white transition-colors relative" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-tighter">Cart</span>
+<!-- Notification Badge -->
+<span class="absolute top-2 right-2 w-2 h-2 bg-gold rounded-full"></span>
+</a>
+<!-- Inactive Tab: Profile -->
+<a class="flex flex-col items-center justify-center text-[#1B2A4A]/40 dark:text-slate-500 pt-2 pb-2 w-16 hover:text-[#1B2A4A] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+</body></html>
